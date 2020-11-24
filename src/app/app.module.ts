@@ -17,7 +17,8 @@ import * as MOCKDATA from '../../_mock';
     BrowserModule,
     HttpClientModule,
     CoreModule,
-    NgEasyMockModule.forRoot({ data: (<any>{ Test: { '/get': { data: 1 } } }) })
+    // NgEasyMockModule.forRoot({ data: (<any>{ Test: { '/get': { data: 1 } } }) })
+    NgEasyMockModule.forRoot({ data: MOCKDATA })
   ],
   bootstrap: [AppComponent]
 })

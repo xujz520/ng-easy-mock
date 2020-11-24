@@ -6,9 +6,9 @@ import * as Mock from 'mockjs';
  */
 export const Common = {
   // GET 成功
-  '/get': { code: 0 },
+  '/get?a=1': { code: 0 },
   // POST 成功
-  'POST /post': { code: 0 },
+  'POST /post?a=1': { code: 0 },
   // 文件上传
   // 'POST /upload': { code: 0, data: { url: Mock.Random.image('150x150', Mock.Random.color(), Mock.Random.color(), 'png', 'MockJS') } },
 };
