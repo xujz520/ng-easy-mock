@@ -1,13 +1,13 @@
 import { Injectable, Optional, Inject } from '@angular/core';
 
-import { MockConfig, Config } from './interfaces';
+import { MockConfig, Config, rule } from './interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NgEasyMockService {
 
-  ruleList: { method: string, url: string, data: any }[] = [];
+  ruleList: rule[] = [];
 
   constructor(@Optional() @Inject(Config) public config: MockConfig) {
     this.config = Object.assign({ delay: 300, log: true }, this.config);
@@ -28,15 +28,20 @@ export class NgEasyMockService {
 
   }
 
-  getRule(method: string, url: string): any {
+  /**
+   * 获取规则
+   * @param method 
+   * @param url 
+   */
+  getRule(method: string, url: string) {
     method = method.toLocaleUpperCase();
     url = this.getPath(url);
 
-    let rule = this.ruleList.filter(item => item.method == method).find(item => {
+    return this.ruleList.filter(item => item.method == method).find(item => {
       let urlSegmentList = this.getUrlSegment(url);
-      let ruleUrlSegmentList = this.getUrlSegment(item.url);
-      if (urlSegmentList.length == ruleUrlSegmentList.length) {
-        return ruleUrlSegmentList.every((ruleUrlSegment, index) => {
+      let ruleSegmentList = this.getUrlSegment(item.url);
+      if (urlSegmentList.length == ruleSegmentList.length) {
+        return ruleSegmentList.every((ruleUrlSegment, index) => {
           if(ruleUrlSegment.startsWith(':')) return true;
           return ruleUrlSegment == urlSegmentList[index];
         });
@@ -44,8 +49,6 @@ export class NgEasyMockService {
         return false;
       }
     });
-
-    return rule?.data;
   }
 
   /**
@@ -53,7 +56,7 @@ export class NgEasyMockService {
    * @param url 
    */
   getPath(url: string) {
-    return url.slice(0, url.indexOf('?') || undefined);
+    return url.slice(0, url.includes('?') ? url.indexOf('?') : undefined);
   }
 
   /**

@@ -1,46 +1,52 @@
-import { MockStatusError } from 'ng-easy-mock';
+import { MockStatusError, MockRequest } from '_ng-easy-mock';
 import * as Mock from 'mockjs';
-
-/**
- * 公共
- */
-export const Common = {
-  // GET 成功
-  '/get?a=1': { code: 0 },
-  // POST 成功
-  'POST /post?a=1': { code: 0 },
-  // 文件上传
-  // 'POST /upload': { code: 0, data: { url: Mock.Random.image('150x150', Mock.Random.color(), Mock.Random.color(), 'png', 'MockJS') } },
-};
 
 /**
  * 示例
  */
 export const Example = {
   // GET
-  'GET /api/users': {},
-  '/api/users/1': {},
-  // POST 请求
-  'POST /api/users/1': {},
-  // 注入请求参数
-  '/api/qs': (params) => {
-    console.log(params);
-    return {
-      code: 0,
-      // queryString: req.queryString,
-      // body: req.body
-    }
+  'GET /example/getUserList': { code: 0, data: null },
+  '/example/getUserList': null, // 默认 GET
+  // POST
+  'POST /example/createUser': null,
+  // RESTful风格(路由参数)
+  'GET /example/user/:userId': null,
+  'POST /example/user': null,
+  'PUT /example/user/:userId': null,
+  'DELETE /user/:userId': null,
+  // 完整的URL
+  'https://angular.io': null,
+  // 注入请求参数(动态生成数据)
+  '/example/user/:userId/card/:cardId': (req: MockRequest) => {
+    /**
+     * interface MockRequest {
+     *    // 路由参数(键值对)
+     *    params: { [key: string]: string },
+     *    // 查询字符串(键值对)
+     *    queryString: { [key: string]: string },
+     *    // 自定义请求头(键值对)
+     *    headers: { [key: string]: string },
+     *    // 载荷数据
+     *    body: any,
+     *    // 原始请求对象
+     *    original: HttpRequest<any>
+     * }
+     */
+    console.log(req);
+    return { code: 0, data: null };
   },
   // 使用 MockJS
-  '/api/user/list': Mock.mock({
+  '/example/getMockList': Mock.mock({
     'code': 0,
     'data': {
-      'data|5': [{
+      'data|20': [{
         'id|+1': 1,
-        'name': '@cname'
+        'name': '@cname',
+        'age|0-150': 0,
       }]
     }
   }),
   // 发送 Status 错误
-  '/api/404': () => { throw new MockStatusError(500); }
+  '/example/500': () => { throw new MockStatusError(500); }
 };
