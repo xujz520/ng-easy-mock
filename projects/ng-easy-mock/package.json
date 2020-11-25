@@ -1,26 +1,8 @@
 {
   "name": "ng-easy-mock",
   "version": "0.0.1",
-  "author": "xu junzhou",
-  "license": "MIT",
-  "keywords": [
-    "angular",
-    "ng",
-    "mock",
-    "mockjs"
-  ],
-  "description": "一个适用于Angular项目的接口mock服务",
-  "homepage": "https://ng.ant.design",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/NG-ZORRO/ng-zorro-antd"
-  },
   "peerDependencies": {
-    "@angular/common": "^10.2.0",
-    "@angular/core": "^10.2.0"
-  },
-  "dependencies": {
-    "tslib": "^2.0.0",
-    "mockjs": "^1.1.0"
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
   }
 }
