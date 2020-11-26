@@ -1,5 +1,4 @@
 import { MockConfig, rule } from './interfaces';
-import * as ɵngcc0 from '@angular/core';
 export declare class NgEasyMockService {
     config: MockConfig;
     ruleList: rule[];
@@ -20,7 +19,4 @@ export declare class NgEasyMockService {
      * @param url
      */
     getUrlSegment(url: string): string[];
-    static ɵfac: ɵngcc0.ɵɵFactoryDef<NgEasyMockService, [{ optional: true; }]>;
 }
-
-//# sourceMappingURL=ng-easy-mock.service.d.ts.map
