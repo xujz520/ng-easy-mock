@@ -3,5 +3,6 @@
   "dest": "../../dist/ng-easy-mock",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["mockjs"]
 }
