@@ -1,1 +1,0 @@
-{"version":3,"file":"ng-easy-mock.d.ts","sources":["ng-easy-mock.d.ts"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA","sourcesContent":["/**\r\n * Generated bundle index. Do not edit.\r\n */\r\nexport * from './public-api';\r\nexport { NgEasyMockInterceptor as ɵa } from './lib/ng-easy-mock.interceptor';\r\n"]}
