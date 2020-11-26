@@ -3,10 +3,11 @@
 # 版本
 | ng-easy-mock 版本 | Angular 版本 | NPM |
 | ------------ | ------------ | ------------ |
-| v7.0.0 | v7.x | `npm install ng-easy-mock@7.0.0 --save` |
-| v8.0.0 | v8.x | `npm install ng-easy-mock@8.0.0 --save` |
-| v9.0.0 | v9.x | `npm install ng-easy-mock@9.0.0 --save` |
-| v10.0.0 | v10.x | `npm install ng-easy-mock@10.0.0 --save` |
+| v7.x | v7.x | `npm install ng-easy-mock@7.x --save` |
+| v8.x | v8.x | `npm install ng-easy-mock@8.x --save` |
+| v9.x | v9.x | `npm install ng-easy-mock@9.x --save` |
+| v10.x | v10.x | `npm install ng-easy-mock@10.x --save` |
+| v11.x | v11.x | `npm install ng-easy-mock@11.x --save` |
 
 # 使用方式
 ### 目录结构
@@ -24,10 +25,11 @@
 	│  └─environments
 	└─package.json
 
-### /_mock/_example.ts
+### /_mock/_example.ts [示例规则]
+> ng-easy-mock 为您自动安装了mockjs(<a href="http://mockjs.com/" target="_blank">什么是mockjs?</a>), 请直接使用.
+
 ```ts
 import { MockStatusError, MockRequest } from 'ng-easy-mock';
-// ng-easy-mock 为您自动安装了mockjs, 请直接使用
 import * as Mock from 'mockjs';
 
 /**
@@ -81,13 +83,13 @@ export const Example = {
 };
 ```
 
-### /_mock/index.ts
+### /_mock/index.ts [输出所有规则]
 ```ts
 export * from './_example';
 export * from './_user';
 ```
 
-### app.module.ts
+### app.module.ts [根模块]
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -127,7 +129,7 @@ import * as MOCKDATA from '../../_mock';
 export class AppModule { }
 ```
 
-### app.component.ts
+### app.component.ts [示例组件]
 ```ts
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -151,16 +153,17 @@ export class AppComponent {
 ```
 
 ### 在线示例
-<a href="123" target="_blank">在线示例</a>
+<a href="https://stackblitz.com/edit/ng-easy-mock-demo" target="_blank">https://stackblitz.com/edit/ng-easy-mock-demo</a>
 
 # 原理
-`ng-easy-mock` 本质是一个HTTP拦截器, 匹配预先定义好的规则从而发放mock响应. 并不会真正的发出http请求, 相关日志通过console控制台输出:  
-![avatar](cosnole.png)
+`ng-easy-mock` 本质是一个HTTP拦截器, 匹配预先定义好的规则从而发放mock响应. 并不会真正的发出http请求, 相关日志通过console控制台输出.
+
+![](http://null_720_0252.gitee.io/ng-easy-mock/src/assets/console.png)
 
 ### 提供拦截器的顺序
 `ng-easy-mock` 模块应当处于你的拦截器(<a href="https://angular.cn/guide/http#intercepting-requests-and-responses" target="_blank">什么是拦截器?</a>)之后, 以便最先发出响应.
 
-### core.module.ts
+### core.module.ts [核心模块]
 ```ts
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -178,8 +181,9 @@ import { DefaultInterceptor } from './default.interceptor';
 export class CoreModule { }
 ```
 
-### default.interceptor.ts
+### default.interceptor.ts [你自己的业务级HTTP拦截器]
 > 操作url时应当排除mock接口
+
 ```ts
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpEventType } from '@angular/common/http';
@@ -245,5 +249,7 @@ export class DefaultInterceptor implements HttpInterceptor {
 ```
 
 # 二次开发
-1. ng build ng-easy-mock --watch #增量构建lib
-2. ng serve #启动demo调试lib
+1. `ng build ng-easy-mock --watch` #增量构建lib
+2. `ng serve` #启动demo调试lib
+3. `...`
+4. `ng build ng-easy-mock --prod` #构建

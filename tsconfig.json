@@ -16,7 +16,7 @@
       "dom"
     ],
     "paths": {
-      "_ng-easy-mock": [
+      "ng-easy-mock": [
         "dist/ng-easy-mock/ng-easy-mock",
         "dist/ng-easy-mock"
       ]

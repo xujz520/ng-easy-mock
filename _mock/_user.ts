@@ -1,4 +1,4 @@
-import { MockStatusError, MockRequest } from '_ng-easy-mock';
+import { MockStatusError, MockRequest } from 'ng-easy-mock';
 import * as Mock from 'mockjs';
 
 /**

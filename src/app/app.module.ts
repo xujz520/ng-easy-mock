@@ -6,7 +6,7 @@ import { environment } from '../environments/environment';
 import { CoreModule } from './core/core.module'; 
 import { AppComponent } from './app.component';
 
-import { NgEasyMockModule } from '_ng-easy-mock';
+import { NgEasyMockModule } from 'ng-easy-mock';
 import * as MOCKDATA from '../../_mock';
 
 @NgModule({

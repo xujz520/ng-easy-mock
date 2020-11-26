@@ -4,7 +4,7 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpEventType } f
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
-import { NgEasyMockService } from '_ng-easy-mock';
+import { NgEasyMockService } from 'ng-easy-mock';
 
 /**
  * 你的业务级拦截器

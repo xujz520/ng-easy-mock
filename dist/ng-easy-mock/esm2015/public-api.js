@@ -1,0 +1,7 @@
+/*
+ * Public API Surface of ng-easy-mock
+ */
+export * from './lib/interfaces';
+export * from './lib/ng-easy-mock.service';
+export * from './lib/ng-easy-mock.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJFOi9uZy1lYXN5LW1vY2svbmctZWFzeS1tb2NrL3Byb2plY3RzL25nLWVhc3ktbW9jay9zcmMvIiwic291cmNlcyI6WyJwdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyxrQkFBa0IsQ0FBQztBQUNqQyxjQUFjLDRCQUE0QixDQUFDO0FBQzNDLGNBQWMsMkJBQTJCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxyXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2YgbmctZWFzeS1tb2NrXHJcbiAqL1xyXG5cclxuZXhwb3J0ICogZnJvbSAnLi9saWIvaW50ZXJmYWNlcyc7XHJcbmV4cG9ydCAqIGZyb20gJy4vbGliL25nLWVhc3ktbW9jay5zZXJ2aWNlJztcclxuZXhwb3J0ICogZnJvbSAnLi9saWIvbmctZWFzeS1tb2NrLm1vZHVsZSc7XHJcbiJdfQ==

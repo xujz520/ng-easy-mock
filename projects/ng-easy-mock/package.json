@@ -9,11 +9,11 @@
     "mock",
     "mockjs"
   ],
-  "description": "一个适用于Angular项目的接口mock服务",
-  "homepage": "https://ng.ant.design",
+  "description": "为 Angular 项目提供数据mock服务",
+  "homepage": "https://gitee.com/null_720_0252/ng-easy-mock",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NG-ZORRO/ng-zorro-antd"
+    "url": "https://gitee.com/null_720_0252/ng-easy-mock"
   },
   "peerDependencies": {
     "@angular/common": "^10.2.0",
