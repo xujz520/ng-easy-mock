@@ -146,6 +146,11 @@
           "options": {
             "tsConfig": "projects/ng-easy-mock/tsconfig.lib.json",
             "project": "projects/ng-easy-mock/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-easy-mock/tsconfig.lib.json"
+            }
           }
         },
         "test": {
