@@ -1,6 +1,6 @@
 {
   "name": "ng-easy-mock",
-  "version": "0.0.1",
+  "version": "9.0.0",
   "author": "xu junzhou",
   "license": "MIT",
   "keywords": [
@@ -16,11 +16,11 @@
     "url": "https://gitee.com/null_720_0252/ng-easy-mock"
   },
   "peerDependencies": {
-    "@angular/common": "^10.2.0",
-    "@angular/core": "^10.2.0"
+    "@angular/common": "^9.1.12",
+    "@angular/core": "^9.1.12"
   },
   "dependencies": {
-    "tslib": "^2.0.0",
+    "tslib": "^1.10.0",
     "mockjs": "^1.1.0"
   }
 }

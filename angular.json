@@ -131,7 +131,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/ng-easy-mock/tsconfig.lib.json",
             "project": "projects/ng-easy-mock/ng-package.json"
@@ -163,10 +163,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "ng-easy-mock-demo",
-  "cli": {
-    "analytics": false
-  }
+    }},
+  "defaultProject": "ng-easy-mock-demo"
 }

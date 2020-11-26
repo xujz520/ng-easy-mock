@@ -3,3 +3,5 @@
  */
 export * from './public-api';
 export { NgEasyMockInterceptor as ɵa } from './lib/ng-easy-mock.interceptor';
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmctZWFzeS1tb2NrLmQudHMiLCJzb3VyY2VzIjpbIm5nLWVhc3ktbW9jay5kLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogR2VuZXJhdGVkIGJ1bmRsZSBpbmRleC4gRG8gbm90IGVkaXQuXHJcbiAqL1xyXG5leHBvcnQgKiBmcm9tICcuL3B1YmxpYy1hcGknO1xyXG5leHBvcnQgeyBOZ0Vhc3lNb2NrSW50ZXJjZXB0b3IgYXMgybVhIH0gZnJvbSAnLi9saWIvbmctZWFzeS1tb2NrLmludGVyY2VwdG9yJztcclxuIl19
