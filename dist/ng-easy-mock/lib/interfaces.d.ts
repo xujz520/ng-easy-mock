@@ -46,4 +46,3 @@ export interface rule {
  * 配置注入令牌(内部使用)
  */
 export declare const Config: InjectionToken<MockConfig>;
-//# sourceMappingURL=interfaces.d.ts.map

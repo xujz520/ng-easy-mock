@@ -10,10 +10,10 @@
     "mockjs"
   ],
   "description": "为 Angular 项目提供数据mock服务",
-  "homepage": "https://ng.ant.design",
+  "homepage": "https://gitee.com/null_720_0252/ng-easy-mock",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NG-ZORRO/ng-zorro-antd"
+    "url": "https://gitee.com/null_720_0252/ng-easy-mock"
   },
   "peerDependencies": {
     "@angular/common": "^10.2.0",
@@ -29,8 +29,6 @@
   "esm2015": "esm2015/ng-easy-mock.js",
   "fesm2015": "fesm2015/ng-easy-mock.js",
   "typings": "ng-easy-mock.d.ts",
-  "sideEffects": false,
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
-  }
+  "metadata": "ng-easy-mock.metadata.json",
+  "sideEffects": false
 }

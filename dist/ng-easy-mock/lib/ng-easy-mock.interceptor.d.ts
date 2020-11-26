@@ -2,7 +2,6 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/c
 import { Observable } from 'rxjs';
 import { NgEasyMockService } from './ng-easy-mock.service';
 import { rule, MockRequest } from './interfaces';
-import * as i0 from "@angular/core";
 export declare class NgEasyMockInterceptor implements HttpInterceptor {
     mockService: NgEasyMockService;
     constructor(mockService: NgEasyMockService);
@@ -18,7 +17,4 @@ export declare class NgEasyMockInterceptor implements HttpInterceptor {
      * @param obj
      */
     clone(obj?: any): any;
-    static ɵfac: i0.ɵɵFactoryDef<NgEasyMockInterceptor, never>;
-    static ɵprov: i0.ɵɵInjectableDef<NgEasyMockInterceptor>;
 }
-//# sourceMappingURL=ng-easy-mock.interceptor.d.ts.map

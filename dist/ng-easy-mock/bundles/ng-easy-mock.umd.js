@@ -381,23 +381,15 @@
         };
         return NgEasyMockService;
     }());
-    NgEasyMockService.ɵfac = function NgEasyMockService_Factory(t) { return new (t || NgEasyMockService)(i0.ɵɵinject(Config, 8)); };
-    NgEasyMockService.ɵprov = i0.ɵɵdefineInjectable({ token: NgEasyMockService, factory: NgEasyMockService.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(NgEasyMockService, [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root'
-                    }]
-            }], function () {
-            return [{ type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [Config]
-                        }] }];
-        }, null);
-    })();
+    NgEasyMockService.ɵprov = i0.ɵɵdefineInjectable({ factory: function NgEasyMockService_Factory() { return new NgEasyMockService(i0.ɵɵinject(Config, 8)); }, token: NgEasyMockService, providedIn: "root" });
+    NgEasyMockService.decorators = [
+        { type: i0.Injectable, args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    NgEasyMockService.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [Config,] }] }
+    ]; };
 
     var NgEasyMockInterceptor = /** @class */ (function () {
         function NgEasyMockInterceptor(mockService) {
@@ -458,13 +450,12 @@
         };
         return NgEasyMockInterceptor;
     }());
-    NgEasyMockInterceptor.ɵfac = function NgEasyMockInterceptor_Factory(t) { return new (t || NgEasyMockInterceptor)(i0.ɵɵinject(NgEasyMockService)); };
-    NgEasyMockInterceptor.ɵprov = i0.ɵɵdefineInjectable({ token: NgEasyMockInterceptor, factory: NgEasyMockInterceptor.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(NgEasyMockInterceptor, [{
-                type: i0.Injectable
-            }], function () { return [{ type: NgEasyMockService }]; }, null);
-    })();
+    NgEasyMockInterceptor.decorators = [
+        { type: i0.Injectable }
+    ];
+    NgEasyMockInterceptor.ctorParameters = function () { return [
+        { type: NgEasyMockService }
+    ]; };
 
     var NgEasyMockModule = /** @class */ (function () {
         function NgEasyMockModule() {
@@ -477,23 +468,15 @@
         };
         return NgEasyMockModule;
     }());
-    NgEasyMockModule.ɵmod = i0.ɵɵdefineNgModule({ type: NgEasyMockModule });
-    NgEasyMockModule.ɵinj = i0.ɵɵdefineInjector({ factory: function NgEasyMockModule_Factory(t) { return new (t || NgEasyMockModule)(); }, providers: [{ provide: http.HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }], imports: [[
-                common.CommonModule
-            ]] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(NgEasyMockModule, { imports: [common.CommonModule] }); })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(NgEasyMockModule, [{
-                type: i0.NgModule,
-                args: [{
-                        providers: [{ provide: http.HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }],
-                        declarations: [],
-                        imports: [
-                            common.CommonModule
-                        ]
-                    }]
-            }], null, null);
-    })();
+    NgEasyMockModule.decorators = [
+        { type: i0.NgModule, args: [{
+                    providers: [{ provide: http.HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }],
+                    declarations: [],
+                    imports: [
+                        common.CommonModule
+                    ]
+                },] }
+    ];
 
     /*
      * Public API Surface of ng-easy-mock
@@ -507,6 +490,7 @@
     exports.MockStatusError = MockStatusError;
     exports.NgEasyMockModule = NgEasyMockModule;
     exports.NgEasyMockService = NgEasyMockService;
+    exports.ɵa = NgEasyMockInterceptor;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
