@@ -20,7 +20,6 @@
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
-    "jquery": "^3.5.1",
     "mockjs": "^1.1.0",
     "ng-easy-mock": "0.0.1",
     "rxjs": "~6.6.0",
