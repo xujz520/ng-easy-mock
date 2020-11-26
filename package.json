@@ -1,6 +1,6 @@
 {
   "name": "ng-easy-mock-demo",
-  "version": "0.0.0",
+  "version": "10.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,7 +21,6 @@
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
     "mockjs": "^1.1.0",
-    "ng-easy-mock": "0.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
