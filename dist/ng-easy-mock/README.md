@@ -8,6 +8,7 @@
 | v9.x | v9.x | `npm install ng-easy-mock@9.x --save` |
 | v10.x | v10.x | `npm install ng-easy-mock@10.x --save` |
 | v11.x | v11.x | `npm install ng-easy-mock@11.x --save` |
+| v12.x | v12.x | `npm install ng-easy-mock@12.x --save` |
 
 # 使用方式
 ### 目录结构

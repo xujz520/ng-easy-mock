@@ -1,5 +1,5 @@
 /**
  * Generated bundle index. Do not edit.
  */
+/// <amd-module name="ng-easy-mock" />
 export * from './public-api';
-export { NgEasyMockInterceptor as ɵa } from './lib/ng-easy-mock.interceptor';

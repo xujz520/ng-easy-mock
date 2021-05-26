@@ -1,4 +1,5 @@
 import { MockConfig, rule } from './interfaces';
+import * as i0 from "@angular/core";
 export declare class NgEasyMockService {
     config: MockConfig;
     ruleList: rule[];
@@ -19,4 +20,6 @@ export declare class NgEasyMockService {
      * @param url
      */
     getUrlSegment(url: string): string[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<NgEasyMockService, [{ optional: true; }]>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<NgEasyMockService>;
 }

@@ -4,6 +4,28 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ng-easy-mock'] = {}, global.ng.core, global.ng.common.http, global.ng.common, global.rxjs, global.rxjs.operators));
 }(this, (function (exports, i0, http, common, rxjs, operators) { 'use strict';
 
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () {
+                            return e[k];
+                        }
+                    });
+                }
+            });
+        }
+        n['default'] = e;
+        return Object.freeze(n);
+    }
+
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+
     /**
      * 模拟HTTP错误状态类
      */
@@ -43,6 +65,8 @@
         return extendStatics(d, b);
     };
     function __extends(d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -228,11 +252,13 @@
         }
         return ar;
     }
+    /** @deprecated */
     function __spread() {
         for (var ar = [], i = 0; i < arguments.length; i++)
             ar = ar.concat(__read(arguments[i]));
         return ar;
     }
+    /** @deprecated */
     function __spreadArrays() {
         for (var s = 0, i = 0, il = arguments.length; i < il; i++)
             s += arguments[i].length;
@@ -241,7 +267,11 @@
                 r[k] = a[j];
         return r;
     }
-    ;
+    function __spreadArray(to, from) {
+        for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+            to[j] = from[i];
+        return to;
+    }
     function __await(v) {
         return this instanceof __await ? (this.v = v, this) : new __await(v);
     }
@@ -306,18 +336,21 @@
     function __importDefault(mod) {
         return (mod && mod.__esModule) ? mod : { default: mod };
     }
-    function __classPrivateFieldGet(receiver, privateMap) {
-        if (!privateMap.has(receiver)) {
-            throw new TypeError("attempted to get private field on non-instance");
-        }
-        return privateMap.get(receiver);
+    function __classPrivateFieldGet(receiver, state, kind, f) {
+        if (kind === "a" && !f)
+            throw new TypeError("Private accessor was defined without a getter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
+            throw new TypeError("Cannot read private member from an object whose class did not declare it");
+        return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
     }
-    function __classPrivateFieldSet(receiver, privateMap, value) {
-        if (!privateMap.has(receiver)) {
-            throw new TypeError("attempted to set private field on non-instance");
-        }
-        privateMap.set(receiver, value);
-        return value;
+    function __classPrivateFieldSet(receiver, state, value, kind, f) {
+        if (kind === "m")
+            throw new TypeError("Private method is not writable");
+        if (kind === "a" && !f)
+            throw new TypeError("Private accessor was defined without a setter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
+            throw new TypeError("Cannot write private member to an object whose class did not declare it");
+        return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
     }
 
     var NgEasyMockService = /** @class */ (function () {
@@ -381,15 +414,21 @@
         };
         return NgEasyMockService;
     }());
-    NgEasyMockService.ɵprov = i0.ɵɵdefineInjectable({ factory: function NgEasyMockService_Factory() { return new NgEasyMockService(i0.ɵɵinject(Config, 8)); }, token: NgEasyMockService, providedIn: "root" });
-    NgEasyMockService.decorators = [
-        { type: i0.Injectable, args: [{
-                    providedIn: 'root'
-                },] }
-    ];
-    NgEasyMockService.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [Config,] }] }
-    ]; };
+    NgEasyMockService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockService, deps: [{ token: Config, optional: true }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    NgEasyMockService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockService, providedIn: 'root' });
+    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockService, decorators: [{
+                type: i0.Injectable,
+                args: [{
+                        providedIn: 'root'
+                    }]
+            }], ctorParameters: function () {
+            return [{ type: undefined, decorators: [{
+                            type: i0.Optional
+                        }, {
+                            type: i0.Inject,
+                            args: [Config]
+                        }] }];
+        } });
 
     var NgEasyMockInterceptor = /** @class */ (function () {
         function NgEasyMockInterceptor(mockService) {
@@ -450,12 +489,11 @@
         };
         return NgEasyMockInterceptor;
     }());
-    NgEasyMockInterceptor.decorators = [
-        { type: i0.Injectable }
-    ];
-    NgEasyMockInterceptor.ctorParameters = function () { return [
-        { type: NgEasyMockService }
-    ]; };
+    NgEasyMockInterceptor.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockInterceptor, deps: [{ token: NgEasyMockService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    NgEasyMockInterceptor.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockInterceptor });
+    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockInterceptor, decorators: [{
+                type: i0.Injectable
+            }], ctorParameters: function () { return [{ type: NgEasyMockService }]; } });
 
     var NgEasyMockModule = /** @class */ (function () {
         function NgEasyMockModule() {
@@ -468,15 +506,21 @@
         };
         return NgEasyMockModule;
     }());
-    NgEasyMockModule.decorators = [
-        { type: i0.NgModule, args: [{
-                    providers: [{ provide: http.HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }],
-                    declarations: [],
-                    imports: [
-                        common.CommonModule
-                    ]
-                },] }
-    ];
+    NgEasyMockModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
+    NgEasyMockModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockModule, imports: [common.CommonModule] });
+    NgEasyMockModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockModule, providers: [{ provide: http.HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }], imports: [[
+                common.CommonModule
+            ]] });
+    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0__namespace, type: NgEasyMockModule, decorators: [{
+                type: i0.NgModule,
+                args: [{
+                        providers: [{ provide: http.HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }],
+                        declarations: [],
+                        imports: [
+                            common.CommonModule
+                        ]
+                    }]
+            }] });
 
     /*
      * Public API Surface of ng-easy-mock
@@ -490,7 +534,6 @@
     exports.MockStatusError = MockStatusError;
     exports.NgEasyMockModule = NgEasyMockModule;
     exports.NgEasyMockService = NgEasyMockService;
-    exports.ɵa = NgEasyMockInterceptor;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

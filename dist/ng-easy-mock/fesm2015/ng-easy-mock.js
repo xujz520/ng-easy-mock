@@ -1,4 +1,5 @@
-import { InjectionToken, ɵɵdefineInjectable, ɵɵinject, Injectable, Optional, Inject, NgModule } from '@angular/core';
+import * as i0 from '@angular/core';
+import { InjectionToken, Injectable, Optional, Inject, NgModule } from '@angular/core';
 import { HttpResponse, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { of } from 'rxjs';
@@ -74,15 +75,19 @@ class NgEasyMockService {
         return url.split('/');
     }
 }
-NgEasyMockService.ɵprov = ɵɵdefineInjectable({ factory: function NgEasyMockService_Factory() { return new NgEasyMockService(ɵɵinject(Config, 8)); }, token: NgEasyMockService, providedIn: "root" });
-NgEasyMockService.decorators = [
-    { type: Injectable, args: [{
-                providedIn: 'root'
-            },] }
-];
-NgEasyMockService.ctorParameters = () => [
-    { type: undefined, decorators: [{ type: Optional }, { type: Inject, args: [Config,] }] }
-];
+NgEasyMockService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockService, deps: [{ token: Config, optional: true }], target: i0.ɵɵFactoryTarget.Injectable });
+NgEasyMockService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockService, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockService, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }], ctorParameters: function () { return [{ type: undefined, decorators: [{
+                    type: Optional
+                }, {
+                    type: Inject,
+                    args: [Config]
+                }] }]; } });
 
 class NgEasyMockInterceptor {
     constructor(mockService) {
@@ -141,12 +146,11 @@ class NgEasyMockInterceptor {
         return JSON.parse(JSON.stringify(obj));
     }
 }
-NgEasyMockInterceptor.decorators = [
-    { type: Injectable }
-];
-NgEasyMockInterceptor.ctorParameters = () => [
-    { type: NgEasyMockService }
-];
+NgEasyMockInterceptor.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockInterceptor, deps: [{ token: NgEasyMockService }], target: i0.ɵɵFactoryTarget.Injectable });
+NgEasyMockInterceptor.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockInterceptor });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockInterceptor, decorators: [{
+            type: Injectable
+        }], ctorParameters: function () { return [{ type: NgEasyMockService }]; } });
 
 class NgEasyMockModule {
     static forRoot(config) {
@@ -156,15 +160,21 @@ class NgEasyMockModule {
         };
     }
 }
-NgEasyMockModule.decorators = [
-    { type: NgModule, args: [{
-                providers: [{ provide: HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }],
-                declarations: [],
-                imports: [
-                    CommonModule
-                ]
-            },] }
-];
+NgEasyMockModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+NgEasyMockModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockModule, imports: [CommonModule] });
+NgEasyMockModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockModule, providers: [{ provide: HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }], imports: [[
+            CommonModule
+        ]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.0.1", ngImport: i0, type: NgEasyMockModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    providers: [{ provide: HTTP_INTERCEPTORS, useClass: NgEasyMockInterceptor, multi: true }],
+                    declarations: [],
+                    imports: [
+                        CommonModule
+                    ]
+                }]
+        }] });
 
 /*
  * Public API Surface of ng-easy-mock
@@ -174,5 +184,5 @@ NgEasyMockModule.decorators = [
  * Generated bundle index. Do not edit.
  */
 
-export { Config, MockStatusError, NgEasyMockModule, NgEasyMockService, NgEasyMockInterceptor as ɵa };
+export { Config, MockStatusError, NgEasyMockModule, NgEasyMockService };
 //# sourceMappingURL=ng-easy-mock.js.map
