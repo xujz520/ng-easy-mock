@@ -1,6 +1,6 @@
 {
   "name": "ng-easy-mock",
-  "version": "12.0.0",
+  "version": "12.0.2",
   "author": "xu junzhou",
   "license": "MIT",
   "keywords": [
@@ -10,10 +10,10 @@
     "mockjs"
   ],
   "description": "为 Angular 项目提供数据mock服务",
-  "homepage": "https://gitee.com/null_720_0252/ng-easy-mock",
+  "homepage": "https://gitee.com/xujz520/ng-easy-mock",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/null_720_0252/ng-easy-mock"
+    "url": "https://gitee.com/xujz520/ng-easy-mock"
   },
   "peerDependencies": {
     "@angular/common": "^12.0.1",
