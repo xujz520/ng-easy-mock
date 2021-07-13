@@ -1,14 +1,9 @@
 `ng-easy-mock` 为 Angular 项目提供数据mock服务, 常用于前后端分离开发时模拟后端接口、仅前端提供数据演示。
 
-# 版本
-| ng-easy-mock 版本 | Angular 版本 | NPM |
-| ------------ | ------------ | ------------ |
-| v7.x | v7.x | `npm install ng-easy-mock@7.x --save` |
-| v8.x | v8.x | `npm install ng-easy-mock@8.x --save` |
-| v9.x | v9.x | `npm install ng-easy-mock@9.x --save` |
-| v10.x | v10.x | `npm install ng-easy-mock@10.x --save` |
-| v11.x | v11.x | `npm install ng-easy-mock@11.x --save` |
-| v12.x | v12.x | `npm install ng-easy-mock@12.x --save` |
+# 安装
+```
+npm install ng-easy-mock --save
+```
 
 # 使用方式
 ### 目录结构
@@ -159,7 +154,7 @@ export class AppComponent {
 # 原理
 `ng-easy-mock` 本质是一个HTTP拦截器, 匹配预先定义好的规则从而发放mock响应. 并不会真正的发出http请求, 相关日志通过console控制台输出.
 
-![](http://xujz520.gitee.io/ng-easy-mock/src/assets/console.png)
+![](./src/assets/console.png)
 
 ### 提供拦截器的顺序
 `ng-easy-mock` 模块应当处于你的拦截器(<a href="https://angular.cn/guide/http#intercepting-requests-and-responses" target="_blank">什么是拦截器?</a>)之后, 以便最先发出响应.
