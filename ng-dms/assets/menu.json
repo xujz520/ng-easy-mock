@@ -1,0 +1,82 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "name": "首页",
+      "path": "index",
+      "icon": "home"
+    },
+    {
+      "name": "在线演示",
+      "path": "https://www.baidu.com/",
+      "icon": "desktop"
+    },
+    {
+      "name": "框架文档",
+      "children": [
+        {
+          "name": "简介",
+          "path": "/frame/frame/intro"
+        },
+        {
+          "name": "菜单",
+          "path": "/frame/frame/menu"
+        },
+        {
+          "name": "路由",
+          "path": "/frame/frame/routes"
+        },
+        {
+          "name": "HTTP",
+          "path": "/frame/frame/http"
+        },
+        {
+          "name": "登录与权限",
+          "path": "/frame/frame/auth"
+        },
+        {
+          "name": "开发工作流",
+          "path": "/frame/frame/workflow"
+        }
+      ]
+    },
+    {
+      "name": "组件文档",
+      "children": [
+        {
+          "name": "echarts 图表",
+          "path": "/frame/components/echarts/index"
+        },
+        {
+          "name": "summernote 富文本",
+          "path": "/frame/components/summernote/index"
+        },
+        {
+          "name": "tinymce 富文本",
+          "path": "/frame/components/tinymce/index"
+        },
+        {
+          "name": "Markdown 预览",
+          "path": "/frame/components/md-preview/index"
+        },
+        {
+          "name": "x-table 表格",
+          "path": "https://xujz520.gitee.io/ng-easy-mock/x-table/"
+        },
+        {
+          "name": "x-form 表单设计器",
+          "path": "https://xujz520.gitee.io/ng-easy-mock/x-form/"
+        },
+        {
+          "name": "x-page CRUD页面构建器",
+          "path": "/frame/components/x-page/index"
+        }
+      ]
+    },
+    {
+      "name": "购买授权",
+      "path": "/frame/buy",
+      "icon": "pay-circle"
+    }
+  ]
+}

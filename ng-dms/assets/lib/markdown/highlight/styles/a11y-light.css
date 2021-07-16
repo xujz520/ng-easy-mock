@@ -1,0 +1,99 @@
+/* a11y-light theme */
+/* Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css */
+/* @author: ericwbailey */
+
+/* Comment */
+.md-comment,
+.md-quote {
+  color: #696969;
+}
+
+/* Red */
+.md-variable,
+.md-template-variable,
+.md-tag,
+.md-name,
+.md-selector-id,
+.md-selector-class,
+.md-regexp,
+.md-deletion {
+  color: #d91e18;
+}
+
+/* Orange */
+.md-number,
+.md-built_in,
+.md-builtin-name,
+.md-literal,
+.md-type,
+.md-params,
+.md-meta,
+.md-link {
+  color: #aa5d00;
+}
+
+/* Yellow */
+.md-attribute {
+  color: #aa5d00;
+}
+
+/* Green */
+.md-string,
+.md-symbol,
+.md-bullet,
+.md-addition {
+  color: #008000;
+}
+
+/* Blue */
+.md-title,
+.md-section {
+  color: #007faa;
+}
+
+/* Purple */
+.md-keyword,
+.md-selector-tag {
+  color: #7928a1;
+}
+
+.md {
+  display: block;
+  overflow-x: auto;
+  background: #fefefe;
+  color: #545454;
+  padding: 0.5em;
+}
+
+.md-emphasis {
+  font-style: italic;
+}
+
+.md-strong {
+  font-weight: bold;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .md-addition,
+  .md-attribute,
+  .md-built_in,
+  .md-builtin-name,
+  .md-bullet,
+  .md-comment,
+  .md-link,
+  .md-literal,
+  .md-meta,
+  .md-number,
+  .md-params,
+  .md-string,
+  .md-symbol,
+  .md-type,
+  .md-quote {
+        color: highlight;
+    }
+
+    .md-keyword,
+    .md-selector-tag {
+        font-weight: bold;
+    }
+}
