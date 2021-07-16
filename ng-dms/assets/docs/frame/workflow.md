@@ -178,4 +178,4 @@ import { SharedModule } from '@shared';
   * 移除 `TinymceModule 富文本编辑器` 模块
   * 移除 `XFormRenderModule 表单渲染器` 模块
   * 移除 `XPageRenderModule CRUD页面渲染器` 模块
-
+* 移除水印( `app/layout/frame/frame.component.ts` )
