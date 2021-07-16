@@ -1,0 +1,326 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "name": "首页",
+      "path": "/dashboard",
+      "icon": "home"
+    },
+    {
+      "name": "数据大屏",
+      "path": "https://xujz520.gitee.io/ng-easy-mock/ng-dms/example/#/data-screen/index",
+      "icon": "desktop"
+    },
+    {
+      "name": "演示模块",
+      "key": "/example",
+      "children": [
+        {
+          "name": "表格增删改查",
+          "path": "/example/crud",
+          "acl": "/example/crud",
+          "children": [
+            {
+              "name": "列表",
+              "acl": "/example/crud"
+            },
+            {
+              "name": "添加",
+              "acl": "/example/crud/add"
+            },
+            {
+              "name": "修改",
+              "acl": "/example/crud/update"
+            },
+            {
+              "name": "删除",
+              "acl": "/example/crud/delete"
+            },
+            {
+              "name": "批量删除",
+              "acl": "/example/crud/batch-delete"
+            },
+            {
+              "name": "发放奖学金",
+              "acl": "/example/crud/grant"
+            }
+          ]
+        },
+        {
+          "name": "增删改查 AntDesign 风格",
+          "path": "/example/crud-ant-design",
+          "acl": "/example/crud-ant-design"
+        },
+        {
+          "name": "数据展示列表",
+          "path": "/example/data-list",
+          "acl": "/example/data-list"
+        },
+        {
+          "name": "Tab页面",
+          "path": "/example/tab-page",
+          "acl": "/example/tab-page"
+        },
+        {
+          "name": "页面查询表单",
+          "path": "/example/search-form",
+          "acl": "/example/search-form"
+        },
+        {
+          "name": "页面背景",
+          "path": "/example/page-bg",
+          "acl": "/example/page-bg"
+        },
+        {
+          "name": "页面跳转传参",
+          "key": "/example/navigator",
+          "children": [
+            {
+              "name": "页面一",
+              "path": "/example/navigator/page1",
+              "acl": "/example/navigator/page1"
+            },
+            {
+              "name": "页面二",
+              "path": "/example/navigator/page2",
+              "acl": "/example/navigator/page3"
+            },
+            {
+              "name": "参数路由",
+              "path": "/example/navigator/route-params",
+              "acl": "/example/navigator/route-params"
+            }
+          ]
+        },
+        {
+          "name": "动态增减表单项",
+          "path": "/example/form-array",
+          "acl": "/example/form-array"
+        },
+        {
+          "name": "省市区选择",
+          "path": "/example/address",
+          "acl": "/example/address"
+        },
+        {
+          "name": "富文本编辑",
+          "key": "/example/richtext",
+          "children": [
+            {
+              "name": "Summernote",
+              "path": "/example/richtext/summernote",
+              "acl": "/example/richtext/summernote"
+            },
+            {
+              "name": "TinyMCE",
+              "path": "/example/richtext/tinymce",
+              "acl": "/example/richtext/tinymce"
+            }
+          ]
+        },
+        {
+          "name": "CRUD构建页面",
+          "key": "/example/x-page",
+          "children": [
+            {
+              "name": "测试页面(本地配置)",
+              "path": "/example/x-page-native",
+              "acl": "/example/x-page-native"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "公众号管理",
+      "icon": "wechat",
+      "key": "/wx",
+      "children": [
+        {
+          "name": "公众号列表",
+          "path": "/wx/list",
+          "acl": "/wx/list"
+        },
+        {
+          "name": "素材管理",
+          "key": "/wx/material",
+          "children": [
+            {
+              "name": "图片",
+              "path": "/wx/material_image",
+              "acl": "/wx/material_image"
+            },
+            {
+              "name": "语音",
+              "path": "/wx/material_voice",
+              "acl": "/wx/material_voice"
+            },
+            {
+              "name": "视频",
+              "path": "/wx/material_video",
+              "acl": "/wx/material_video"
+            },
+            {
+              "name": "图文",
+              "path": "/wx/material_article",
+              "acl": "/wx/material_article"
+            }
+          ]
+        },
+        {
+          "name": "用户管理",
+          "path": "/wx/wxuser",
+          "acl": "/wx/wxuser"
+        },
+        {
+          "name": "消息管理",
+          "path": "/wx/message",
+          "acl": "/wx/message"
+        },
+        {
+          "name": "自动回复",
+          "path": "/wx/auto_reply",
+          "acl": "/wx/auto_reply"
+        },
+        {
+          "name": "消息群发",
+          "path": "/wx/mass_send",
+          "acl": "/wx/mass_send"
+        },
+        {
+          "name": "自定义菜单",
+          "path": "/wx/menu",
+          "acl": "/wx/menu"
+        }
+      ]
+    },
+    {
+      "name": "销售管理",
+      "icon": "pay-circle",
+      "children": [
+        {
+          "name": "市场营销",
+          "path": "/sell/marketing",
+          "acl": "/sell/marketing"
+        },
+        {
+          "name": "线索管理",
+          "path": "/sell/clues",
+          "acl": "/sell/clues"
+        },
+        {
+          "name": "售前管理",
+          "children": [
+            {
+              "name": "商机报备",
+              "path": "/sell/pre-sales/trademark",
+              "acl": "/sell/pre-sales/trademark"
+            },
+            {
+              "name": "客户信息收集",
+              "path": "/sell/pre-sales/customer",
+              "acl": "/sell/pre-sales/customer"
+            },
+            {
+              "name": "产品和售价",
+              "path": "/sell/pre-sales/product",
+              "acl": "/sell/pre-sales/product"
+            }
+          ]
+        },
+        {
+          "name": "合同管理",
+          "path": "/sell/contract",
+          "acl": "/sell/contract"
+        },
+        {
+          "name": "服务管理",
+          "path": "/sell/serve",
+          "acl": "/sell/serve"
+        },
+        {
+          "name": "回款管理",
+          "path": "/sell/gathering",
+          "acl": "/sell/gathering"
+        }
+      ]
+    },
+    {
+      "name": "库存管理",
+      "icon": "security-scan",
+      "children": [
+        {
+          "name": "商品管理",
+          "path": "/stock/goods",
+          "acl": "/stock/goods"
+        },
+        {
+          "name": "商品分类管理",
+          "path": "/stock/category",
+          "acl": "/stock/category"
+        },
+        {
+          "name": "供应商管理",
+          "path": "/stock/factory",
+          "acl": "/stock/factory"
+        },
+        {
+          "name": "商品入库",
+          "path": "/stock/instock",
+          "acl": "/stock/instock"
+        },
+        {
+          "name": "商品出库",
+          "path": "/stock/outstock",
+          "acl": "/stock/outstock"
+        },
+        {
+          "name": "库存盘点",
+          "path": "/stock/storepandian",
+          "acl": "/stock/storepandian"
+        },
+        {
+          "name": "库存预警",
+          "path": "/stock/stockwarn",
+          "acl": "/stock/stockwarn"
+        }
+      ]
+    },
+    {
+      "name": "系统设置",
+      "icon": "setting",
+      "children": [
+        {
+          "name": "角色权限管理",
+          "path": "/system/role",
+          "acl": "/system/role",
+          "icon": "safety-certificate"
+        },
+        {
+          "name": "用户管理",
+          "path": "/system/user",
+          "acl": "/system/user",
+          "icon": "user"
+        },
+        {
+          "name": "表单设计器",
+          "path": "/system/x-form-design",
+          "acl": "/system/x-form-design",
+          "icon": "form"
+        },
+        {
+          "name": "CRUD页面构建器",
+          "path": "/system/x-page-design",
+          "acl": "/system/x-page-design",
+          "icon": "ant-design"
+        },
+        {
+          "name": "CRUD页面构建列表",
+          "path": "/system/x-page-list",
+          "acl": "/system/x-page-list",
+          "icon": "bars"
+        }
+      ]
+    }
+  ]
+}
