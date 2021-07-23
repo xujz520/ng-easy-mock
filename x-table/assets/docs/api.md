@@ -64,6 +64,8 @@
 | `[pageOffsetStart]` | `string` | `'offsetStart'` | 分页起始行的偏移字段, 设置为 null 则不发送 |
 | `[pageSizeField]` | `string` | `'pageSize'` | 分页大小字段 |
 | `[flowPagination]` | `boolean` | false | 流式分页 |
+| `[prevText]]` | `string` | `'上一页'` | 上一页按钮文案 |
+| `[nextText]` | `string` | `'下一页'` | 下一页按钮文案 |
 
 ##### 不分页
 ```html
