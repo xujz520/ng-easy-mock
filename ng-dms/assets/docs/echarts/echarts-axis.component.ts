@@ -66,10 +66,7 @@ export class EchartsAxisComponent implements OnInit {
           }
         }
       ],
-      dataZoom: [
-        { type: 'slider', xAxisIndex: 0, },
-        { type: 'inside', xAxisIndex: 0, }
-      ],
+      dataZoom: [{ type: 'slider', xAxisIndex: 0, }],
       series: [
         {
           name: '平均气温',

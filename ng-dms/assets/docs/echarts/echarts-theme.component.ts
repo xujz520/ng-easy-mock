@@ -52,10 +52,7 @@ export class EchartsThemeComponent implements OnInit {
       yAxis: {
         type: 'value'
       },
-      dataZoom: [
-        { type: 'slider', xAxisIndex: 0, },
-        { type: 'inside', xAxisIndex: 0, }
-      ],
+      dataZoom: [{ type: 'slider', xAxisIndex: 0, }],
       series: []
     };
 

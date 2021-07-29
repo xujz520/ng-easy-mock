@@ -49,10 +49,7 @@ export class EchartsSeriesComponent implements OnInit {
           formatter: '{value} °C'
         }
       },
-      dataZoom: [
-        { type: 'slider', xAxisIndex: 0, },
-        { type: 'inside', xAxisIndex: 0, }
-      ],
+      dataZoom: [{ type: 'slider', xAxisIndex: 0, }],
       series: [
         {
           name: '高温',
